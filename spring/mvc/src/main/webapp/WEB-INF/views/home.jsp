@@ -1,16 +1,18 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ page session="false"   pageEncoding="utf-8"%>
 <!doctype html>
-<html ng-app="todoApp">
- <head>
+<html ng-app>
+
+  <head>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.0-rc.3/angular.min.js"></script>
     <script src="todo.js"></script>
     <link rel="stylesheet" href="todo.css">
   </head>
+  
  
-  <body>
+ <body>
     <h2>Todo</h2>
-    <P>  The time on the server is ${serverTime}. </P>
+       <P>  The time on the server is ${serverTime}. </P>
     <div ng-controller="TodoController">
       <span>{{remaining()}} of {{todos.length}} remaining</span>
       [ <a href="" ng-click="archive()">archive</a> ]
@@ -26,6 +28,7 @@
         <input class="btn-primary" type="submit" value="add">
       </form>
     </div>
-  </body>
+  </body>    
+ 
 </html>
 
